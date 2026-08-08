@@ -63,7 +63,7 @@ const Home = () => {
 								<span className="text-[#72787d] flex items-center gap-2">
 									<Focus size={14} /> Focus
 								</span>
-								<span className="text-[#0b1c30]">Minimalist Interfaces</span>
+								<span className="text-[#0b1c30]">Minimalism</span>
 							</div>
 						</div>
 					</div>
