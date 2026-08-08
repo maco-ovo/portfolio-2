@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import InitialPage from "./pages/Initialpage.tsx";
-import Home from "./pages/Home";
+import InitialPage from "./sections/InitialPage.tsx";
+import Home from "./sections/Home.tsx";
 import Sidebar from "./components/Sidebar.tsx";
 
 function App() {
