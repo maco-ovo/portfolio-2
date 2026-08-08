@@ -19,9 +19,8 @@ const Home = () => {
 			transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
 			className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 pt-20 md:pt-8"
 		>
-			{/* Bento Box Grid Container: 1 column on mobile, 3 columns on desktop */}
 			<div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr md:h-[80vh] min-h-[600px]">
-				{/* 1. Profile Card (Left Column) */}
+				{/* 1. Profile Card  */}
 				<GlassCard
 					delay={0.1}
 					className="flex flex-col col-span-1 h-full justify-between"
@@ -74,7 +73,7 @@ const Home = () => {
 					</div>
 				</GlassCard>
 
-				{/* Middle Column (Stack & Picture) */}
+				{/* Stack & Picture */}
 				<div className="flex flex-col gap-6 col-span-1 h-full">
 					{/* 2. Stack Card */}
 					<GlassCard delay={0.2} className="flex-1 flex flex-col">
@@ -100,12 +99,12 @@ const Home = () => {
 						</div>
 					</GlassCard>
 
-					{/* 3. Picture/Visual Card */}
+					{/* 3. Picture Card */}
 					<GlassCard
 						delay={0.3}
 						className="flex-1 relative overflow-hidden group p-0 flex items-center justify-center min-h-[200px]"
 					>
-						{/* Placeholder for actual image. You can replace this div with an <img> tag later */}
+						{/*replace this div with an <img> tag later */}
 						<div className="absolute inset-0 bg-gradient-to-br from-[#e5eeff] to-[#cae6ff] opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
 						<p className="text-[#40627b] font-mono text-xs tracking-widest z-10">
 							[ Visual Space ]
