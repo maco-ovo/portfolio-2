@@ -4,7 +4,7 @@ A minimalist, highly interactive personal portfolio showcasing my journey as a F
 
 ## 🔗 Live Demo
 
-[https://makoto-arata-portfolio-v2.netlify.app/](https://your-netlify-url.netlify.app/)
+[https://makoto-arata-portfolio-v2.netlify.app/](https://makoto-arata-portfolio-v2.netlify.app/)
 
 ## Tech Stack
 
