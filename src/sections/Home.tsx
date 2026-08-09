@@ -7,9 +7,8 @@ import {
 	ExternalLink,
 } from "lucide-react";
 import GlassCard from "../components/GlassCard";
-import ProjectsModal from "../sections/ProjectsModal";
+
 import { projectsData } from "../data/portfolioData";
-import { useState } from "react";
 import { GithubIcon } from "../components/Icons";
 
 interface Props {
@@ -19,7 +18,6 @@ interface Props {
 }
 
 const Home = ({ onOpenProjects, onOpenAbout, onOpenContact }: Props) => {
-	const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
 	const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 3);
 	return (
 		<>
@@ -30,7 +28,7 @@ const Home = ({ onOpenProjects, onOpenAbout, onOpenContact }: Props) => {
 				transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
 				className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 pt-20 md:pt-8"
 			>
-				<div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr md:h-[80vh] min-h-[600px]">
+				<div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr md:h-[80vh] min-h-[500px]">
 					{/* 1. Profile Card  */}
 					<GlassCard
 						delay={0.1}
@@ -136,11 +134,13 @@ const Home = ({ onOpenProjects, onOpenAbout, onOpenContact }: Props) => {
 							delay={0.3}
 							className="flex-1 relative overflow-hidden group p-0 flex items-center justify-center min-h-[200px]"
 						>
-							{/*replace this div with an <img> tag later */}
-							<div className="absolute inset-0 bg-gradient-to-br from-[#e5eeff] to-[#cae6ff] opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
-							<p className="text-primary font-mono text-xs tracking-widest z-10">
-								[ Visual Space ]
-							</p>
+							<img
+								src="/sky_2.JPG"
+								alt="Makoto Arata"
+								className="absolute inset-0 w-full h-full object-cover transition-transform duration-700"
+							/>
+
+							<div className="absolute inset-0 bg-linier-to-br from-ice-blue/30 to-primary/60 mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-500"></div>
 						</GlassCard>
 					</div>
 
