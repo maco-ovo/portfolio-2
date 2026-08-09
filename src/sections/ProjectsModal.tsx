@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink } from "lucide-react";
 import { projectsData } from "../data/portfolioData";
-import { GithubIcon } from "./Icons";
+import { GithubIcon } from "../components/Icons";
 
 interface Props {
 	isOpen: boolean;

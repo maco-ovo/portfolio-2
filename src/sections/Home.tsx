@@ -7,12 +7,18 @@ import {
 	ExternalLink,
 } from "lucide-react";
 import GlassCard from "../components/GlassCard";
-import ProjectsModal from "../components/ProjectsModal";
+import ProjectsModal from "../sections/ProjectsModal";
 import { projectsData } from "../data/portfolioData";
 import { useState } from "react";
 import { GithubIcon } from "../components/Icons";
 
-const Home = () => {
+interface Props {
+	onOpenProjects: () => void;
+	onOpenAbout: () => void;
+	onOpenContact: () => void;
+}
+
+const Home = ({ onOpenProjects, onOpenAbout, onOpenContact }: Props) => {
 	const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
 	const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 3);
 	return (
@@ -76,11 +82,26 @@ const Home = () => {
 						</div>
 
 						<div className="mt-8 pt-6 border-t border-[#c2c7cd]/30">
-							<p className="text-[#42474d] text-sm leading-relaxed">
+							<p className="text-[#42474d] text-sm leading-relaxed border-b border-[#c2c7cd]/30 pb-3">
 								A Full Stack Developer with a background in Psychology.
 								<br />
 								Keep being a Lifelong learner.
 							</p>
+
+							<div className="flex gap-6 pt-4">
+								<button
+									onClick={onOpenAbout}
+									className="text-[10px] font-mono tracking-widest text-[#40627b] flex items-center gap-1 hover:text-[#0b1c30] transition-colors"
+								>
+									READ MORE <ArrowRight size={12} strokeWidth={1.5} />
+								</button>
+								<button
+									onClick={onOpenContact}
+									className="text-[10px] font-mono tracking-widest text-[#40627b] flex items-center gap-1 hover:text-[#0b1c30] transition-colors"
+								>
+									CONTACT <ArrowRight size={12} strokeWidth={1.5} />
+								</button>
+							</div>
 						</div>
 					</GlassCard>
 
@@ -133,7 +154,7 @@ const Home = () => {
 								Projects
 							</h2>
 							<button
-								onClick={() => setIsProjectsModalOpen(true)}
+								onClick={onOpenProjects}
 								className="text-[10px] font-mono text-primary flex items-center gap-1 hover:text-[#0b1c30] transition-colors"
 							>
 								VIEW ALL <ArrowRight size={12} strokeWidth={1.5} />
@@ -185,11 +206,6 @@ const Home = () => {
 					</GlassCard>
 				</div>
 			</motion.div>
-
-			<ProjectsModal
-				isOpen={isProjectsModalOpen}
-				onClose={() => setIsProjectsModalOpen(false)}
-			/>
 		</>
 	);
 };
