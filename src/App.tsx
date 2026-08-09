@@ -16,7 +16,7 @@ function App() {
 	const [isContactOpen, setIsContactOpen] = useState(false);
 
 	return (
-		<div className="min-h-screen bg-[#f8f9ff] text-[#0b1c30] font-sans selection:bg-ice-blue">
+		<div className="min-h-screen text-[#0b1c30] font-sans selection:bg-ice-blue">
 			<AnimatePresence mode="wait">
 				{!hasEntered ? (
 					<InitialPage key="initial" onEnter={() => setHasEntered(true)} />
