@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import ProjectsModal from "./sections/ProjectsModal";
 import AboutModal from "./sections/AboutModal";
 import ContactModal from "./sections/ContactModal";
+import StackModal from "./sections/StackModal";
 
 function App() {
 	const [hasEntered, setHasEntered] = useState(false);
@@ -14,6 +15,7 @@ function App() {
 	const [isProjectsOpen, setIsProjectsOpen] = useState(false);
 	const [isAboutOpen, setIsAboutOpen] = useState(false);
 	const [isContactOpen, setIsContactOpen] = useState(false);
+	const [isStackOpen, setIsStackOpen] = useState(false);
 
 	return (
 		<div className="min-h-screen text-[#0b1c30] font-sans selection:bg-ice-blue">
@@ -22,7 +24,6 @@ function App() {
 					<InitialPage key="initial" onEnter={() => setHasEntered(true)} />
 				) : (
 					<div key="main" className="flex relative">
-						
 						<Header
 							onOpenProjects={() => setIsProjectsOpen(true)}
 							onOpenAbout={() => setIsAboutOpen(true)}
@@ -35,6 +36,7 @@ function App() {
 								onOpenProjects={() => setIsProjectsOpen(true)}
 								onOpenAbout={() => setIsAboutOpen(true)}
 								onOpenContact={() => setIsContactOpen(true)}
+								onOpenStack={() => setIsStackOpen(true)}
 							/>
 						</main>
 					</div>
@@ -50,6 +52,7 @@ function App() {
 				isOpen={isContactOpen}
 				onClose={() => setIsContactOpen(false)}
 			/>
+			<StackModal isOpen={isStackOpen} onClose={() => setIsStackOpen(false)} />
 		</div>
 	);
 }

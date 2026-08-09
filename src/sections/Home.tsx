@@ -9,15 +9,22 @@ import {
 import GlassCard from "../components/GlassCard";
 
 import { projectsData } from "../data/portfolioData";
+import { coreStack } from "../data/stackData";
 import { GithubIcon } from "../components/Icons";
 
 interface Props {
 	onOpenProjects: () => void;
 	onOpenAbout: () => void;
 	onOpenContact: () => void;
+	onOpenStack: () => void;
 }
 
-const Home = ({ onOpenProjects, onOpenAbout, onOpenContact }: Props) => {
+const Home = ({
+	onOpenProjects,
+	onOpenAbout,
+	onOpenContact,
+	onOpenStack,
+}: Props) => {
 	const featuredProjects = projectsData.filter((p) => p.featured).slice(0, 3);
 	return (
 		<>
@@ -106,22 +113,25 @@ const Home = ({ onOpenProjects, onOpenAbout, onOpenContact }: Props) => {
 					{/* Stack & Picture */}
 					<div className="flex flex-col gap-6 col-span-1 h-full">
 						{/* 2. Stack Card */}
-						<GlassCard delay={0.2} className="flex-1 flex flex-col">
-							<h2 className="text-[10px] font-mono tracking-[0.1em] text-[#72787d] uppercase mb-6">
-								Stack
-							</h2>
+						<GlassCard delay={0.2} className="flex-1 flex flex-col relative">
+							<div className="flex justify-between items-center mb-6">
+								<h2 className="text-[10px] font-mono tracking-[0.1em] text-[#72787d] uppercase">
+									Stack
+								</h2>
+
+								<button
+									onClick={onOpenStack}
+									className="text-[10px] font-mono text-[#40627b] flex items-center gap-1 hover:text-[#0b1c30] transition-colors"
+								>
+									VIEW ALL <ArrowRight size={12} strokeWidth={1.5} />
+								</button>
+							</div>
+
 							<div className="flex flex-wrap gap-2">
-								{[
-									"React",
-									"TypeScript",
-									"Tailwind CSS",
-									"Next.js",
-									"Python",
-									"PostgreSQL",
-								].map((tech) => (
+								{coreStack.map((tech) => (
 									<span
 										key={tech}
-										className="px-3 py-1.5 bg-[#eaf1ff] text-[#40627b] text-xs font-mono rounded-sm border border-[#dce9ff]"
+										className="px-3 py-1.5 bg-[#eaf1ff] text-[#40627b] text-xs font-mono rounded-sm border border-[#dce9ff] hover:bg-[#dce9ff] transition-colors cursor-default"
 									>
 										{tech}
 									</span>
