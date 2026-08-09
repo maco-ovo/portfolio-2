@@ -4,14 +4,13 @@ import {
 	Briefcase,
 	Focus,
 	ArrowRight,
-	LayoutGrid,
-	Globe,
-	Smartphone,
+	ExternalLink,
 } from "lucide-react";
 import GlassCard from "../components/GlassCard";
 import ProjectsModal from "../components/ProjectsModal";
 import { projectsData } from "../data/portfolioData";
 import { useState } from "react";
+import { GithubIcon } from "../components/Icons";
 
 const Home = () => {
 	const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
@@ -71,14 +70,16 @@ const Home = () => {
 									<span className="text-[#72787d] flex items-center gap-2">
 										<Focus size={14} /> Focus
 									</span>
-									<span className="text-[#0b1c30]">Minimalism</span>
+									<span className="text-[#0b1c30]">Cognitive Minimalism</span>
 								</div>
 							</div>
 						</div>
 
 						<div className="mt-8 pt-6 border-t border-[#c2c7cd]/30">
 							<p className="text-[#42474d] text-sm leading-relaxed">
-								text here
+								A Full Stack Developer with a background in Psychology.
+								<br />
+								Keep being a Lifelong learner.
 							</p>
 						</div>
 					</GlassCard>
@@ -131,7 +132,6 @@ const Home = () => {
 							<h2 className="text-[10px] font-mono tracking-widest text-[#72787d] uppercase">
 								Projects
 							</h2>
-
 							<button
 								onClick={() => setIsProjectsModalOpen(true)}
 								className="text-[10px] font-mono text-primary flex items-center gap-1 hover:text-[#0b1c30] transition-colors"
@@ -142,17 +142,13 @@ const Home = () => {
 
 						<div className="flex flex-col gap-6 flex-1 pr-2 custom-scrollbar">
 							{featuredProjects.map((project) => (
-								<a
-									key={project.id}
-									href={project.link || "#"}
-									target={project.link ? "_blank" : "_self"}
-									rel="noopener noreferrer"
-									className="flex gap-4 items-start group cursor-pointer"
-								>
+								// <a> タグから <div> タグに変更
+								<div key={project.id} className="flex gap-4 items-start group">
 									<div className="w-11 h-11 shrink-0 rounded-lg bg-[#eaf1ff] flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
 										<project.icon size={18} strokeWidth={1.5} />
 									</div>
-									<div>
+
+									<div className="flex-1">
 										<h3 className="text-[#0b1c30] font-medium text-sm mb-1 group-hover:text-primary transition-colors duration-300">
 											{project.title}
 										</h3>
@@ -160,7 +156,30 @@ const Home = () => {
 											{project.date} | {project.category}
 										</p>
 									</div>
-								</a>
+
+									<div className="flex items-center gap-3">
+										<a
+											href={project.github}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-[#c2c7cd] hover:text-primary transition-colors"
+											title="Source Code"
+										>
+											<GithubIcon size={16} />
+										</a>
+										{project.link && (
+											<a
+												href={project.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="text-[#c2c7cd] hover:text-primary transition-colors"
+												title="Live Demo"
+											>
+												<ExternalLink size={16} strokeWidth={1.5} />
+											</a>
+										)}
+									</div>
+								</div>
 							))}
 						</div>
 					</GlassCard>
