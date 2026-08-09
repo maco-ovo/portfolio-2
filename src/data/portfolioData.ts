@@ -15,6 +15,7 @@ export interface Project {
 	icon: LucideIcon;
 	github: string;
 	link?: string;
+	featured?: boolean;
 }
 
 export const projectsData: Project[] = [
@@ -26,6 +27,7 @@ export const projectsData: Project[] = [
 		icon: UserRound,
 		github: "https://github.com/maco-ovo/portfolio.git",
 		link: "https://portfoliomakotoarata.netlify.app/",
+		featured: false,
 	},
 	{
 		id: "chat-app",
@@ -35,16 +37,19 @@ export const projectsData: Project[] = [
 		icon: Globe2Icon,
 		github:
 			"https://github.com/Cornerstone-CICCC/final-project-full-stack-real-time-app-missing-guil.git",
+		featured: true,
 	},
+
 	{
 		id: "weather-forecast-app",
 		title: "Weather ForeCat",
 		date: "2026.05",
-		category: "Frontend Dev (React)",
+		category: "Full Stack Dev",
 		icon: CloudSunIcon,
 		github:
 			"https://github.com/Cornerstone-CICCC/midterm-weather-app-str-cats.git",
 		link: "https://weather-forecats.netlify.app/",
+		featured: true,
 	},
 	{
 		id: "cafe-website",
@@ -54,6 +59,7 @@ export const projectsData: Project[] = [
 		icon: Coffee,
 		github: "https://github.com/maco-ovo/WD203-react-cafe-app.git",
 		link: "https://203-final-react-cafe-app.netlify.app/",
+		featured: true,
 	},
 	{
 		id: "linkedin-job-skills-analysis",
@@ -62,5 +68,6 @@ export const projectsData: Project[] = [
 		category: "Data Science",
 		icon: ChartColumn,
 		github: "https://github.com/maco-ovo/DS_Linkedin_job_skills.git",
+		featured: false,
 	},
 ];

@@ -4,7 +4,7 @@ type Props = {
 	onEnter: () => void;
 };
 
-export default function InitialPage({ onEnter }: Props) {
+const InitialPage = ({ onEnter }: Props) => {
 	return (
 		<motion.div
 			className="h-screen w-full flex flex-col items-center justify-center cursor-pointer"
@@ -21,4 +21,6 @@ export default function InitialPage({ onEnter }: Props) {
 			</p>
 		</motion.div>
 	);
-}
+};
+
+export default InitialPage;
