@@ -46,8 +46,8 @@
 @layer components {
 	/* Glass Card Component */
 	.glass-card {
-		background-color: rgb(255 255 255 / 0.6);
-		backdrop-filter: blur(20px);
+		background-color: rgb(255 255 255 / 0.3);
+		backdrop-filter: blur(12px);
 		border-radius: var(--radius-lg, 0.5rem);
 		border: 1px solid rgb(255 255 255 / 0.1);
 		box-shadow:
