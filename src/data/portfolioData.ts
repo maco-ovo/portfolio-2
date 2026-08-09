@@ -1,15 +1,10 @@
 import {
-	LayoutGrid,
-	Globe,
-	Smartphone,
 	type LucideIcon,
-	Database,
 	Coffee,
-	GlobeIcon,
-	Sunrise,
 	CloudSunIcon,
 	Globe2Icon,
 	ChartColumn,
+	UserRound,
 } from "lucide-react";
 
 export interface Project {
@@ -23,6 +18,15 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
+	{
+		id: "portflio-1",
+		title: "My first portfolio",
+		date: "2026.02",
+		category: "HTML / CSS",
+		icon: UserRound,
+		github: "https://github.com/maco-ovo/portfolio.git",
+		link: "https://portfoliomakotoarata.netlify.app/",
+	},
 	{
 		id: "chat-app",
 		title: "Real-Time Chat App",
