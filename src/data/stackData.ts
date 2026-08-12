@@ -13,6 +13,7 @@ export const fullStackData = [
 		category: "Frontend",
 		skills: [
 			"React",
+			"NEXT.js",
 			"TypeScript",
 			"Astro",
 			"JavaScript",
