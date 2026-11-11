@@ -46,7 +46,7 @@ const AboutModal = ({ isOpen, onClose }: Props) => {
 								<p className="text-[#42474d] text-sm leading-relaxed mb-4">
 									I am passionate about the intersection of Web Development and
 									Data Science. I love building intuitive web interfaces while
-									also diving deep into data to uncover meaningful insights.
+									also diving deep into data to uncover any insights.
 								</p>
 								<p className="text-[#42474d] text-sm leading-relaxed">
 									Coming from a psychology background, I am fascinated by how
@@ -61,12 +61,8 @@ const AboutModal = ({ isOpen, onClose }: Props) => {
 									Future Vision
 								</h3>
 								<p className="text-[#42474d] text-sm leading-relaxed">
-									I want to use my combined knowledge of psychology and
-									technology to improve everyday Quality of Life (QOL).
-									Specifically, I am focused on creating apps in the everyday
-									health and mental care space, as well as platforms dedicated
-									to study and learning support to help others document and
-									track their educational journeys.
+									I want to use my combined knowledge of psychology and web
+									technology to improve everyday Quality of Life.
 								</p>
 							</section>
 						</div>

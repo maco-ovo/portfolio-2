@@ -1,4 +1,5 @@
 export const coreStack = [
+	"Next.js",
 	"React",
 	"TypeScript",
 	"Tailwind CSS",
